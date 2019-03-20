@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--默认命名空间-->
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:property="http://www.springframework.org/schema/c"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-      <bean id="feedbackVo1" class="com.shenxuan.springboot.bean.FeedBackVo"
-            p:age="12"
-            p:sex="M"
-            p:name="shenxuian"
-      />
+
+      <bean id="feedbackvo" class="com.shenxuan.springboot.fb.FeedBackVoFactoryBean"
+         p:feedBackVoInfo="sgeb,23,dsaaaa"/>
+      <bean id="magicBoss" class="com.shenxuan.springboot.injectfun.MajcBoss" >
+            <lookup-method name="getFeedBackVo" bean="feedbackvo"/>
+      </bean>
 
 
 </beans>
