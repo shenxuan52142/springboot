@@ -1,0 +1,7 @@
+server:
+  port: 9090
+  servlet:
+    context-path:
+logging:
+  file: D:/mylog/log.log
+  level: debug
