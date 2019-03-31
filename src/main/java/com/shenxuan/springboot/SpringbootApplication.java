@@ -1,6 +1,7 @@
 package com.shenxuan.springboot;
-
+import com.shenxuan.*;
 import org.elasticsearch.search.aggregations.bucket.composite.DateHistogramValuesSourceBuilder;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -18,16 +19,23 @@ import org.springframework.web.bind.annotation.RestController;
 		MongoAutoConfiguration.class,
 		ElasticsearchDataAutoConfiguration.class})
 @RestController
-@ImportResource({})
+//@ImportResource({})
 public class SpringbootApplication {
-	@Value("${book.author}")
-	private String bookAuthor;
-	@Value("${book.name}")
-	private String bookName;
+//	@Value("${book.author}")
+//	private String bookAuthor;
+//	@Value("${book.name}")
+//	private String bookName;
+//	@RequestMapping("/")
+//    String index(){
+//		return "book name is : " + bookName + " and book author is :" + bookAuthor;
+//	}
+	@SuppressWarnings("all")
+	@Autowired
+	HelloService helloService;
 	@RequestMapping("/")
-    String index(){
-		return "book name is : " + bookName + " and book author is :" + bookAuthor;
-	}
+    public String index(){
+		return helloService.sayHello();
+    }
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootApplication.class, args);
 	}
