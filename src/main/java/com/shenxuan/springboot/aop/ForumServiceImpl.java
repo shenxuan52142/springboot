@@ -1,5 +1,7 @@
 package com.shenxuan.springboot.aop;
 
+import com.shenxuan.springboot.annotation.UseCase;
+
 public class ForumServiceImpl implements ForumService {
     @Override
     public void removeToplic(int topicId) {
@@ -12,6 +14,7 @@ public class ForumServiceImpl implements ForumService {
     }
 
     @Override
+    @UseCase(id = 46)
     public void removeFourm(int forum) {
         System.out.println("模拟删除Forum记录："+forum);
         try{
