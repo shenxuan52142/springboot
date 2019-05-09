@@ -12,4 +12,20 @@
       </bean>
 
 
+      <bean id="controlFlowPointcut" class="org.springframework.aop.support.ControlFlowPointcut">
+            <constructor-arg type="java.lang.Class"
+                             value="com.shenxuan.springboot.aop.WaiterDelegate"/>
+            <constructor-arg type="java.lang.String"
+                             value="service"/>
+      </bean>
+
+      <bean id="controlFlowAdvisor"
+             class="org.springframework.aop.support.DefaultPointcutAdvisor"
+       p:pointcut-ref="controlFlowPointcut"
+       p:advice-ref="greetingAdvice"/>
+
+      <bean id="waiter3" class="org.springframework.aop.framework.ProxyFactoryBean"
+            p:interceptorNames="controlFlowAdvisor"
+            p:target-ref="waiterTarget"
+            p:proxyTargetClass="true"/>
 </beans>
