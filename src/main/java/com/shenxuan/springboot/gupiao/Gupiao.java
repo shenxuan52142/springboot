@@ -1,22 +1,23 @@
 package com.shenxuan.springboot.gupiao;
 
+import java.util.Date;
+
 public class Gupiao {
-    private String daima;
     private String volume;
     private double open;
     private double high;
     private double close;
     private double low;
-    private String chg;
-    private String percent;
-    private float turnrate;
+    private double chg;
+    private double percent;
+    private double turnrate;
     private float ma5;
     private float ma10;
     private float ma20;
     private float ma30;
     private String dif;
     private String dea;
-    private double macd;
+    private String macd;
     private String lot_volume;
     private long timestamp;
     private String time;
@@ -61,27 +62,27 @@ public class Gupiao {
         this.low = low;
     }
 
-    public String getChg() {
+    public double getChg() {
         return chg;
     }
 
-    public void setChg(String chg) {
+    public void setChg(double chg) {
         this.chg = chg;
     }
 
-    public String getPercent() {
+    public double getPercent() {
         return percent;
     }
 
-    public void setPercent(String percent) {
+    public void setPercent(double percent) {
         this.percent = percent;
     }
 
-    public float getTurnrate() {
+    public double getTurnrate() {
         return turnrate;
     }
 
-    public void setTurnrate(float turnrate) {
+    public void setTurnrate(double turnrate) {
         this.turnrate = turnrate;
     }
 
@@ -133,11 +134,11 @@ public class Gupiao {
         this.dea = dea;
     }
 
-    public double getMacd() {
+    public String getMacd() {
         return macd;
     }
 
-    public void setMacd(double macd) {
+    public void setMacd(String macd) {
         this.macd = macd;
     }
 
@@ -163,13 +164,5 @@ public class Gupiao {
 
     public void setTime(String time) {
         this.time = time;
-    }
-
-    public String getDaima() {
-        return daima;
-    }
-
-    public void setDaima(String daima) {
-        this.daima = daima;
     }
 }

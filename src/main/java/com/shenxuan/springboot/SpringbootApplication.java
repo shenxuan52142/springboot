@@ -33,15 +33,15 @@ public class SpringbootApplication {
 //    String index(){
 //		return "book name is : " + bookName + " and book author is :" + bookAuthor;
 //	}
-	@SuppressWarnings("all")
-	@Autowired
-	HelloService helloService;
-	@RequestMapping(value = "/im/ceshi",method = RequestMethod.POST,produces = "application/json;charset=UTF-8")
-    public String index(@RequestBody JSONObject jsonObject){
-		return helloService.sayHello();
-    }
-	public static void main(String[] args) {
-		SpringApplication.run(SpringbootApplication.class, args);
-	}
+//	@SuppressWarnings("all")
+//	@Autowired
+//	HelloService helloService;
+//	@RequestMapping(value = "/im/ceshi",method = RequestMethod.POST,produces = "application/json;charset=UTF-8")
+//    public String index(@RequestBody JSONObject jsonObject){
+//		return helloService.sayHello();
+//    }
+//	public static void main(String[] args) {
+//		SpringApplication.run(SpringbootApplication.class, args);
+//	}
 
 }
