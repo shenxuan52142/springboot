@@ -21,6 +21,10 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-elasticsearch</artifactId>
 		</dependency>
 		<dependency>
@@ -61,6 +65,18 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.shenxuan</groupId>
+			<artifactId>spring-boot-starter-hello2</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.47</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

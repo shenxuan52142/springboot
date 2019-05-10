@@ -5,6 +5,7 @@ import com.shenxuan.springboot.collection.map.SimpleHashMap;
 import com.shenxuan.springboot.collection.map.SlowMap;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -13,6 +14,7 @@ import java.util.*;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ArraysUnsupported {
+
     @Test
     public void test1(){
         AssociativeArray<String,String> map=new AssociativeArray<String,String>(6);
