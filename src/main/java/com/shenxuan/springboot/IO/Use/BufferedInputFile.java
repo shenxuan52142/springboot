@@ -25,31 +25,31 @@ public class BufferedInputFile {
           return sb.toString();
       }
 
-    public static void main(String[] args) throws IOException{
-        String var1 = read("C:\\Users\\Administrator\\Desktop\\gupiao4.out");
-        System.out.println(var1);
-        List<String> list = new ArrayList<String>();
-        int start = 0;
-        int startFlag = 0;
-        int endFlag = 0;
-        for (int i = 0; i < var1.length(); i++) {
-            if (var1.charAt(i) == '<') {
-                startFlag++;
-                if (startFlag == endFlag + 1) {
-                    start = i;
-                }
-            } else if (var1.charAt(i) == '>') {
-                endFlag++;
-                if (endFlag == startFlag) {
-                    list.add(var1.substring(start + 1, i));
-                }
-            }
-        }
-        System.out.println(list);
-        String var2 = String.join(",",list);
-        System.out.println(var2);
-        List<String> list1 = Arrays.asList(var2.split(","));
-        System.out.println(list1);
-   TextFile.write("C:\\Users\\Administrator\\Desktop\\gupiao5.out",var2);
-    }
+//    public static void main(String[] args) throws IOException{
+//        String var1 = read("C:\\Users\\Administrator\\Desktop\\gupiao4.out");
+//        System.out.println(var1);
+//        List<String> list = new ArrayList<String>();
+//        int start = 0;
+//        int startFlag = 0;
+//        int endFlag = 0;
+//        for (int i = 0; i < var1.length(); i++) {
+//            if (var1.charAt(i) == '<') {
+//                startFlag++;
+//                if (startFlag == endFlag + 1) {
+//                    start = i;
+//                }
+//            } else if (var1.charAt(i) == '>') {
+//                endFlag++;
+//                if (endFlag == startFlag) {
+//                    list.add(var1.substring(start + 1, i));
+//                }
+//            }
+//        }
+//        System.out.println(list);
+//        String var2 = String.join(",",list);
+//        System.out.println(var2);
+//        List<String> list1 = Arrays.asList(var2.split(","));
+//        System.out.println(list1);
+//   TextFile.write("C:\\Users\\Administrator\\Desktop\\gupiao5.out",var2);
+//    }
 }

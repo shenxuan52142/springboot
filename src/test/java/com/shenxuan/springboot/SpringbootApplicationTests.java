@@ -36,29 +36,29 @@ public class SpringbootApplicationTests {
 
 	@Test
 	public void contextLoads() throws Exception{
-		String var=null;
-		String path=null;
-		URL url = null;
-		try {
-			url = new URL(var);
-			DataInputStream dataInputStream = new DataInputStream(url.openStream());
-			FileOutputStream fileOutputStream = new FileOutputStream(new File(path));
-			ByteArrayOutputStream output = new ByteArrayOutputStream();
-
-			byte[] buffer = new byte[1024];
-			int length;
-
-			while ((length = dataInputStream.read(buffer)) > 0) {
-				output.write(buffer, 0, length);
-			}
-			fileOutputStream.write(output.toByteArray());
-			dataInputStream.close();
-			fileOutputStream.close();
-		} catch (MalformedURLException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+//		String var=null;
+//		String path=null;
+//		URL url = null;
+//		try {
+//			url = new URL(var);
+//			DataInputStream dataInputStream = new DataInputStream(url.openStream());
+//			FileOutputStream fileOutputStream = new FileOutputStream(new File(path));
+//			ByteArrayOutputStream output = new ByteArrayOutputStream();
+//
+//			byte[] buffer = new byte[1024];
+//			int length;
+//
+//			while ((length = dataInputStream.read(buffer)) > 0) {
+//				output.write(buffer, 0, length);
+//			}
+//			fileOutputStream.write(output.toByteArray());
+//			dataInputStream.close();
+//			fileOutputStream.close();
+//		} catch (MalformedURLException e) {
+//			e.printStackTrace();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
 	}
 
 
@@ -94,9 +94,9 @@ public class SpringbootApplicationTests {
 	}
 	@Test
 	public void test12(){
-		ApplicationContext context=new AnnotationConfigApplicationContext(Beans.class);
-		FeedBackVo feedBackVo=context.getBean("feedbackvo",FeedBackVo.class);
-		System.out.println(feedBackVo.getAge());
+//		ApplicationContext context=new AnnotationConfigApplicationContext(Beans.class);
+//		FeedBackVo feedBackVo=context.getBean("feedbackvo",FeedBackVo.class);
+//		System.out.println(feedBackVo.getAge());
 	}
 
 }

@@ -22,12 +22,12 @@ public class ThreadLocalVariableHolder {
         return value1;
     }
 
-    public static void main(String[] args) throws Exception{
-        ExecutorService exec = Executors.newCachedThreadPool();
-        for (int i = 0; i <5 ; i++) {
-            exec.execute(new Accessor(i));
-        }
-        TimeUnit.SECONDS.sleep(3);
-        exec.shutdown();
-    }
+//    public static void main(String[] args) throws Exception{
+//        ExecutorService exec = Executors.newCachedThreadPool();
+//        for (int i = 0; i <5 ; i++) {
+//            exec.execute(new Accessor(i));
+//        }
+//        TimeUnit.SECONDS.sleep(3);
+//        exec.shutdown();
+//    }
 }

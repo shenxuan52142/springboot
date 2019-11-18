@@ -10,9 +10,9 @@ public enum SpaceShip {
         return id.charAt(1) + lower;
     }
 
-    public static void main(String[] args) {
-        for (SpaceShip s:values()){
-            System.out.println(s);
-        }
-    }
+//    public static void main(String[] args) {
+//        for (SpaceShip s:values()){
+//            System.out.println(s);
+//        }
+//    }
 }

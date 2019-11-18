@@ -16,7 +16,7 @@ public class PasswordUtils {
         return !prevPasswords.contains(password);
     }
 
-    public static void main(String[] args) {
-        vailidatePassword("sssss");
-    }
+//    public static void main(String[] args) {
+//        vailidatePassword("sssss");
+//    }
 }

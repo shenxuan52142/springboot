@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Scope("prototype")
+//@Scope("prototype")
 @Component
 public class FeedBackVo implements BeanFactoryAware,BeanNameAware,InitializingBean,DisposableBean{
     private String name,sex;

@@ -3,7 +3,8 @@ package com.shenxuan.springboot.collection;
 
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import java.util.NoSuchElementException;
+import java.util.*;
+
 public class SList<T> {
    private static class Link<T>{
        T element;
@@ -62,5 +63,24 @@ public class SList<T> {
                     }
             }
         }
+    }
+
+
+    public static void main(String[] args) {
+//        List<Integer> list = new LinkedList<>();
+//        list.add(1);
+//        list.add(2);
+//        list.add(5);
+//        list.add(45);
+//        list.add(56);
+//
+//        for (Integer a:list){
+//            if (a %2==0){
+//                list.remove(a);
+//            }
+//        }
+
+        List<String> list = Arrays.asList("sssss.ddd.ss".split(","));
+        System.out.println(list);
     }
 }

@@ -32,12 +32,12 @@ public class SimplePriorities implements Runnable {
           }
     }
 
-    public static void main(String[] args) {
-        ExecutorService exec = Executors.newCachedThreadPool();
-        for (int i = 0; i <5 ; i++) {
-            exec.execute(new SimplePriorities(1));
-        }
-        exec.execute(new SimplePriorities(7));
-        exec.shutdown();
-    }
+//    public static void main(String[] args) {
+//        ExecutorService exec = Executors.newCachedThreadPool();
+//        for (int i = 0; i <5 ; i++) {
+//            exec.execute(new SimplePriorities(1));
+//        }
+//        exec.execute(new SimplePriorities(7));
+//        exec.shutdown();
+//    }
 }

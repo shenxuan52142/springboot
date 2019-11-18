@@ -34,22 +34,22 @@ public class AttemptLocking {
     }
 
 
-    public static void main(String[] args)throws Exception {
-        final AttemptLocking al = new AttemptLocking();
-        al.untimed();
-        al.timed();
-   Thread.sleep(1000);
-        new Thread(){
-            {setDaemon(true);}
-
-            @Override
-            public void run() {
-                al.lock.lock();
-                System.out.println("acquired");
-            }
-        }.start();
-        Thread.yield();
-        al.untimed();
-        al.timed();
-    }
+//    public static void main(String[] args)throws Exception {
+//        final AttemptLocking al = new AttemptLocking();
+//        al.untimed();
+//        al.timed();
+//   Thread.sleep(1000);
+//        new Thread(){
+//            {setDaemon(true);}
+//
+//            @Override
+//            public void run() {
+//                al.lock.lock();
+//                System.out.println("acquired");
+//            }
+//        }.start();
+//        Thread.yield();
+//        al.untimed();
+//        al.timed();
+//    }
 }

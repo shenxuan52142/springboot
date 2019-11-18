@@ -14,9 +14,9 @@ public enum  OzWitch {
         return descriptio;
     }
 
-    public static void main(String[] args) {
-        for (OzWitch witch:OzWitch.values()){
-            System.out.println(witch+": "+witch.getDescriptio());
-        }
-    }
+//    public static void main(String[] args) {
+//        for (OzWitch witch:OzWitch.values()){
+//            System.out.println(witch+": "+witch.getDescriptio());
+//        }
+//    }
 }

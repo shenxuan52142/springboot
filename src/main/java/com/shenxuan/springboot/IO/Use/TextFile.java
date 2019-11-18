@@ -59,15 +59,7 @@ public class TextFile extends ArrayList<String> {
     }
 
     public static void main(String[] args) throws IOException {
-        BufferedInputStream in = new BufferedInputStream(new FileInputStream("C:\\Downloads\\BaiduNetdiskDownload\\java.rar"));
-        BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream("C:\\shenxuan\\ceshi6.zip"));
-        FileChannel fc = new FileOutputStream("C:\\shenxuan\\ceshi8.zip").getChannel();
-        int len=-1;
-        byte[]b= new byte[1024];
-        while ((len = in.read(b)) != -1) {
-            out.write(b,0,len);
-            fc.write(ByteBuffer.wrap(b));
-        }
-        out.close();
+        String a = read("C:\\Users\\Administrator\\Desktop\\reportAction.do");
+        System.out.println(a);
     }
 }

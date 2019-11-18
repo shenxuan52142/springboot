@@ -5,12 +5,11 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class Beans {
-//    @Bean(name = "feedbackvo")
-//    public FeedBackVo buildFeedBackVo(){
-//        FeedBackVo feedBackVo=new FeedBackVo();
-//        feedBackVo.setAge("12");
-//        feedBackVo.setName("ddd");
-//        feedBackVo.setSex("M");
-//        return feedBackVo;
-//    }
+    public static String var1 = "sss";
+    static {
+        System.out.println("静态块");
+    }
+   public Beans(){
+       System.out.println("构造器");
+    }
 }
