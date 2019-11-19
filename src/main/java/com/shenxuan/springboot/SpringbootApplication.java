@@ -32,13 +32,5 @@ public class SpringbootApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootApplication.class, args);
 	}
-@RequestMapping(
-		value = {"/im/ceshi"},
-		method = {RequestMethod.GET},
-		produces = {"application/json;charset=UTF-8"}
-)
-public void ceshi() {
-	Money.getAllGupiao();
 
-}
 }

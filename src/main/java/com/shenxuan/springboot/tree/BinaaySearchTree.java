@@ -59,7 +59,11 @@ public class BinaaySearchTree<AnyType extends Comparable<? super AnyType>> {
     }
 
     public void printTree() {
-
+           if (isEmpty()){
+               System.out.println("Tree is Empty");
+           }else {
+               printTree(root);
+           }
     }
 
     private boolean contains(AnyType x, BinaryNode<AnyType> t) {
@@ -116,6 +120,11 @@ public class BinaaySearchTree<AnyType extends Comparable<? super AnyType>> {
     }
 
     private void printTree(BinaryNode<AnyType> t) {
+        if (t!=null){
+            printTree(t.left);
+            System.out.println(t.element);
+            printTree(t.right);
+        }
 
     }
 
