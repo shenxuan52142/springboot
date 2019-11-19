@@ -78,15 +78,37 @@ public class BinaaySearchTree<AnyType extends Comparable<? super AnyType>> {
 
 
     private BinaryNode<AnyType> findMin(BinaryNode<AnyType> t) {
-        return null;
+        if (t==null){
+            return null;
+        }else if (t.left==null){
+            return t;
+        }
+        return findMin(t);
     }
 
     private BinaryNode<AnyType> findmax(BinaryNode<AnyType> t) {
-        return null;
+        if (t==null){
+            return null;
+        }
+        while (t.right!=null){
+            t = t.right;
+        }
+        return t;
     }
 
     private BinaryNode<AnyType> insert(AnyType x, BinaryNode<AnyType> t) {
-        return null;
+        if (t==null){
+            return new BinaryNode<AnyType>(x, null, null);
+        }
+        int compareResult = x.compareTo(t.element);
+        if (compareResult<0){
+            t.left = insert(x, t.left);
+        }else if (compareResult>0){
+            t.right = insert(x, t.right);
+        }else {
+
+        }
+        return t;
     }
 
     private BinaryNode<AnyType> remove(AnyType x, BinaryNode<AnyType> t) {
