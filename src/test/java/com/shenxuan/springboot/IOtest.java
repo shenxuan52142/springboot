@@ -4,6 +4,9 @@ import com.shenxuan.springboot.Enum.SpaceShip;
 import com.shenxuan.springboot.IO.Use.TextFile;
 import com.shenxuan.springboot.Synchronized.Haha;
 import com.shenxuan.springboot.bean.Beans;
+import com.shenxuan.springboot.leetcode.No1122;
+import com.shenxuan.springboot.leetcode.No1160;
+import com.shenxuan.springboot.leetcode.No501;
 import com.shenxuan.springboot.tree.BinaaySearchTree;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -39,5 +42,30 @@ public class IOtest {
         binaaySearchTree.insert(41);
 binaaySearchTree.printTree();
 
+    }
+    @Test
+    public void test2()throws Exception{
+        No1122 no1122 = new No1122();
+        int[] arr1 = new int[]{2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19};
+        int[] arr2 = new int[]{2, 1, 4, 3, 9, 6};
+        no1122.relativeSortArray(arr1, arr2);
+
+    }
+    @Test
+    public void test3()throws Exception{
+        List<Integer> list = new ArrayList<>();
+        list.add(2);
+        list.add(1);
+        list.add(4);
+        list.add(7);
+        list.add(4);
+        list.add(8);
+        list.add(3);
+        list.add(6);
+        list.add(4);
+        list.add(7);
+
+        No501 no501 = new No501();
+        no501.tset(list);
     }
 }
