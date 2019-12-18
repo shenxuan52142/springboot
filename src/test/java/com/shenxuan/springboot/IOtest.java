@@ -51,8 +51,24 @@ binaaySearchTree.printTree();
     }
     @Test
     public void test3()throws Exception{
-        int[] ss = new int[]{4,3,2,7,8,2,3,1};
-        No448 no136 = new No448();
-        no136.findDisappearedNumbers(ss);
+        ListNode a = new ListNode(5);
+        a.next = new ListNode(0);
+        a.next.next = new ListNode(1);
+        a.next.next.next = new ListNode(8);
+        a.next.next.next.next = new ListNode(4);
+        a.next.next.next.next.next = new ListNode(5);
+        ListNode b = new ListNode(4);
+        b.next = new ListNode(1);
+        b.next.next = new ListNode(8);
+        b.next.next.next = new ListNode(4);
+        b.next.next.next.next = new ListNode(5);
+        No160 no160 = new No160();
+        no160.getIntersectionNode(b,a);
+        System.out.println(a);
+    }
+    @Test
+    public void test4() {
+        No20 no20 = new No20();
+        no20.isValid("()");
     }
 }
